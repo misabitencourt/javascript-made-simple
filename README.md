@@ -16,4 +16,6 @@ It was written using the functional paradigm because Javascript is more Haskell 
 
 About the css, no one lib or framework was used, just a css reset followed by the app style.
 
+[Demo](https://github.com/misabitencourt/javascript-made-simple/blob/master/docs/app.gif?raw=true)
+
 
