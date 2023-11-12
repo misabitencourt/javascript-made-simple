@@ -1,8 +1,6 @@
 
 # Javascript Made Simple!
 
--- Introdutory --
-
 Not ever frontend projects needs to use a set of complex tools to build or run. Almost all of the new Javascript projects contains a Framework with this tools, 
 transpilers, transformers, minifiers, css libs and dependencies for every feature. But you dont necessarily need to follow this way to build your application, specially if your project is a small one. 
 
@@ -18,7 +16,7 @@ In order to sample how to use the language in a simple way, using the "Vanilla J
 
 An exemple of a simple CRUD APP in raw Javascript could be found in this repository:
 
--- REPO LINK HERE --
+[https://github.com/misabitencourt/javascript-made-simple](https://github.com/misabitencourt/javascript-made-simple)
 
 ### Importing the main.js script
 
