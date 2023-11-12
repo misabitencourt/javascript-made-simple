@@ -1,12 +1,12 @@
 
 # Javascript Made Simple!
 
-Not ever frontend projects needs to use a set of complex tools to build or run. Almost all of the new Javascript projects contains a Framework with this tools, 
+Not every frontend projects needs to use a set of complex tools to build or run. Almost all of the new Javascript projects contains a Framework with this tools, 
 transpilers, transformers, minifiers, css libs and dependencies for every feature. But you dont necessarily need to follow this way to build your application, specially if your project is a small one. 
 
-This further article shows some approaches to create a application without that bunch of complex tools. A P.O.C. was created in order to demostrate is. It is about one simple crud created with modern Javascript with no dependencies.
+This further article shows some approaches to create a application without that bunch of complex tools. A P.O.C. was created in order to demostrate it. It is about one simple crud created with modern Javascript with no dependencies.
 
-It was wrote using the functional paradigm because Javascript is more Haskell than Java!
+It was written using the functional paradigm because Javascript is more Haskell than Java!
 
 About the css, no one lib or framework was used, just a css reset followed by the app style.
 
@@ -20,7 +20,7 @@ An exemple of a simple CRUD APP in raw Javascript could be found in this reposit
 
 ### Importing the main.js script
 
-Using a HTML5 document, is possible to add a "script" tag with "module" as "type" property.  This tag will import a [ES Module](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) on your web application that could also import another modules.
+Using a HTML5 document, it is possible to add a "script" tag with "module" as "type" property.  This tag will import a [ES Module](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) on your web application that could also import another modules.
 
 index.html
 ```javascript
@@ -57,7 +57,7 @@ Note: The ```div``` with the ```app``` class is out target element to render the
 
 ### The View -  Manipulation Elements with just Javascript
 
-The Javascript runtime available on the current major browsers is powerfull. One of its power is the [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) manipulation. Despite that, the "raw javascript" element API could be simplifyed by our home made functions. For example, if you must create a title for one application section using the built in api, it would be like:
+The Javascript runtime available on the current major browsers is powerful. One of its power is the [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) manipulation. Despite that, the "raw javascript" element API could be simplifyed by our home made functions. For example, if you must create a title for one application section using the built in api, it would be like:
 
 ```javascript
 const title = document.createElement('h1'); // Creates element
@@ -96,7 +96,7 @@ parentElement.appendChild(title);
 
 In order to create a DOM tree in a most efficient way, i reccommend the approach used by some microframeworks like: [Mithril](https://mithril.js.org/), [Hyperapp](https://github.com/jorgebucaran/hyperapp) or [React](https://react.dev/) without JSX.
 
-It could solved by create a function with receives, at least, thease parameters: 
+It could solved by create a function with receives, at least, these parameters: 
 
  - String: the tag name 
  - String: css class list
@@ -308,7 +308,7 @@ By using javascript modules to your advantage, you can naturally create singleto
 
 ### Fetch HTTP Client
 
-The majority of modern apps must send and retrieve data from backend webservices. It is usually being done with HTTP protocol. Nowdays, there is no need of any lib like [JQuery.ajax](https://api.jquery.com/jQuery.ajax/) or [axios](https://axios-http.com/docs/intro) to perform that kind of request.
+The majority of modern apps must send and retrieve data from backend webservices. It is usually being done with HTTP protocol. Nowadays, there is no need of any lib like [JQuery.ajax](https://api.jquery.com/jQuery.ajax/) or [axios](https://axios-http.com/docs/intro) to perform that kind of request.
 
 The modern browsers supports [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) by default. This api uses javascript Promises and it is easy to use. See the following sample:
 
@@ -319,7 +319,7 @@ async function getConfigJson() {
     if (response.code !== 200) {
         throw new Error(`Error no fetch config`);
     }
-    const configJson = await res.json();
+    const configJson = await response.json();
 
     return configJson;
 }
@@ -355,11 +355,11 @@ The LocalStorage also have data size limitations and it is different between bro
 
 With all of that APIs you have seen before, you are able to create and entire application with Javascript without no extra transformer, library or framework. You may consider it optional for smaller projects but some code audition tools are recommended. The standart tools for syntax and style checking are: [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/docs/latest/use/getting-started).
 
-End to end tests (also known as e2e or integration test) are almost excetial for frontend apps. To perform it, [Playwright](https://playwright.dev/) is a good fit for. The original raw javascript code whould not changed or transformed to create it. This lib works just as a bot navigatinig, clicking, typing and checking the app in a browser of your prefference.  
+End to end tests (also known as e2e or integration test) are almost essential for frontend apps. To perform it, [Playwright](https://playwright.dev/) is a good fit for. The original raw javascript code whould not changed or transformed to create it. This lib works just as a bot navigatinig, clicking, typing and checking the app in a browser of your preference.  
 
 ## A good option
 
-As you have seen, it is absolutely possible to create a Javascript application without a bunch of complex polifylls, JSX, transpilers, libs and etc. The first detail you plan about you project do not needs to be a framework choose, why not to give a change to the language default resources? 
+As you have seen, it is absolutely possible to create a Javascript application without a bunch of complex polyfills, JSX, transpilers, libs and etc. The first detail you plan about you project do not needs to be a framework choose, why not give a change to the language default resources? 
 
-If it is about a huge and complex project with dozens of coders from different ecosystems working on it, the dependency avoiding could be on your way. But if you have some mid-sized project or an ordinary one, you may claim yourself for simplicity.  
+If it is about a huge and complex project with dozens of coders from different ecosystems working on it, the avoiding dependencies could be on your way. But if you have some mid-sized project or an ordinary one, you may claim yourself for simplicity.  
 
