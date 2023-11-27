@@ -23,7 +23,7 @@ An exemple of a simple CRUD APP in raw Javascript could be found in this reposit
 Using a HTML5 document, it is possible to add a "script" tag with "module" as "type" property.  This tag will import a [ES Module](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) on your web application that could also import another modules.
 
 index.html
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
